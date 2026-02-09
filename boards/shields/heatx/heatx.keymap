@@ -1,24 +1,41 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/macros.h>
 
 / {
+    /* ---------- MACROS ---------- */
+    macros {
+        vamsi: vamsi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp V
+                &kp A
+                &kp M
+                &kp S
+                &kp I
+            >;
+        };
+    };
+
+    /* ---------- KEYMAP ---------- */
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            /* Right encoder:
-             * CW  → Volume Up
-             * CCW → Volume Down
+            /* Right encoder
+             * CW  -> Volume Up
+             * CCW -> Volume Down
              */
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN
             >;
 
             bindings = <
-                &kp A  &kp B  &kp C  &kp D
-                &kp E  &kp F  &kp G  &kp H
-                &kp I  &kp J  &kp K  &kp L
-                &kp M  &kp N  &kp O  &kp P
+                &vamsi &kp B &kp C &kp D
+                &kp E  &kp F &kp G &kp H
+                &kp I  &kp J &kp K &kp L
+                &kp M  &kp N &kp O &kp P
             >;
         };
     };

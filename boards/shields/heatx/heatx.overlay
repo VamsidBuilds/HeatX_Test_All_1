@@ -8,7 +8,7 @@
         zmk,physical-layout = &default_layout;
     };
 
-    /* ================= MATRIX ================= */
+    /* ================= MATRIX SCANNER ================= */
     kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -32,7 +32,7 @@
         debounce-release-ms = <5>;
     };
 
-    /* ============== MATRIX TRANSFORM ============== */
+    /* ================= MATRIX TRANSFORM ================= */
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <4>;

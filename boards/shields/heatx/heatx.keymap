@@ -6,9 +6,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            /* Bind the right encoder:
-             *   clockwise → Volume Up
-             *   counterclockwise → Volume Down
+            /* Right encoder:
+             * CW  → Volume Up
+             * CCW → Volume Down
              */
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN

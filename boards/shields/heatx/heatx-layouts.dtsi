@@ -1,0 +1,7 @@
+/ {
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Heatx Default Layout";
+        transform = <&default_transform>;  // REQUIRED
+    };
+};

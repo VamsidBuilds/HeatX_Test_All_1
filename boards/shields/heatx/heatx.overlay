@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/nordic/nrf-pinctrl.h>
 
 / {
     chosen {
@@ -39,7 +40,7 @@
         >;
     };
 
-    /* ================= RIGHT ENCODER (FROM DeeDee) ================= */
+    /* ================= ENCODER ================= */
     encoder_right: encoder_right {
         compatible = "alps,ec11";
         a-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -55,5 +56,25 @@
         encoder_right {
             triggers-per-rotation = <24>;
         };
+    };
+};
+
+/* ================= RGB WS2812 (P1.01) ================= */
+
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    sck-pin = <NRF_PSEL(DISCONNECTED)>;
+    mosi-pin = <NRF_PSEL(1, 1)>;   /* P1.01 */
+    miso-pin = <NRF_PSEL(DISCONNECTED)>;
+
+    ws2812: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        reg = <0>;
+        spi-max-frequency = <8000000>;
+
+        chain-length = <1>;
+        color-mapping = <1 0 2>;   /* GRB */
     };
 };

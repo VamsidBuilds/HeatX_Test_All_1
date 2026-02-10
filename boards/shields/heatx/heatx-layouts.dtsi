@@ -1,6 +1,3 @@
-// Physical layout for HeatX
-// Used by ZMK Studio and matrix mapping
-
 #include <physical_layouts.dtsi>
 
 / {
@@ -12,7 +9,6 @@
         kscan = <&kscan>;
 
         keys
-        //   w    h    x    y   rot rx ry
         = <&key_physical_attrs 100 100   0    0    0   0  0>
         , <&key_physical_attrs 100 100 100    0    0   0  0>
         , <&key_physical_attrs 100 100 200    0    0   0  0>

@@ -13,10 +13,13 @@
             >;
 
             bindings = <
-                &kp A                     &kp B                     &kp C                     &kp D
-                &kp E                     &kp F                     &kp G                     &kp H
-                &rgb_ug_toggle            &rgb_ug_effect_next        &rgb_ug_brightness_up     &rgb_ug_brightness_down
-                &kp M                     &kp N                     &kp O                     &kp P
+                &kp A                       &kp B                       &kp C                       &kp D
+                &kp E                       &kp F                       &kp G                       &kp H
+
+                &rgb_ug RGB_TOGGLE          &rgb_ug RGB_EFFECT_NEXT
+                &rgb_ug RGB_BRIGHTNESS_INC  &rgb_ug RGB_BRIGHTNESS_DEC
+
+                &kp M                       &kp N                       &kp O                       &kp P
             >;
         };
     };

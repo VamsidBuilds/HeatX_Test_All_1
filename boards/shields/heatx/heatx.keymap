@@ -7,19 +7,21 @@
 
         default_layer {
 
-            /* Encoder */
             sensor-bindings = <
                 &inc_dec_kp C_VOL_UP C_VOL_DN
             >;
 
             bindings = <
-                &kp A                       &kp B                       &kp C                       &kp D
-                &kp E                       &kp F                       &kp G                       &kp H
+                &kp A                     &kp B                     &kp C                     &kp D
+                &kp E                     &kp F                     &kp G                     &kp H
 
-                &rgb_ug RGB_TOGGLE          &rgb_ug RGB_EFFECT_NEXT
-                &rgb_ug RGB_BRIGHTNESS_INC  &rgb_ug RGB_BRIGHTNESS_DEC
+                &rgb_ug RGB_TOGGLE        &rgb_ug RGB_EFFECT_NEXT
+                &rgb_ug RGB_HUE_DEC       &rgb_ug RGB_HUE_INC
 
-                &kp M                       &kp N                       &kp O                       &kp P
+                &rgb_ug RGB_COLOR_HSB 0   100 16
+                &rgb_ug RGB_COLOR_HSB 120 100 16
+                &rgb_ug RGB_COLOR_HSB 240 100 16
+                &kp P
             >;
         };
     };
